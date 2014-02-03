@@ -25,6 +25,24 @@ describe Pizza::Pie do
       end
     end
   end
+  describe '#vegetarian?' do
+    context 'When all the toppings are meatless' do
+      it 'returns true' do
+        pizza = Pizza::Pie.new
+        
+        expect(pizza.vegetarian?).to be_true
+      end
+    end
+
+    context 'If any of the toppings contain meat' do
+      it 'returns false' do
+        pizza = Pizza::Pie.new('meatballs')
+
+        expect(pizza.vegetarian?).to be_false
+      end
+    end
+  end
+
 end 
 
 describe Pizza::Topping	do
