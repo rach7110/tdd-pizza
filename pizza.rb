@@ -2,7 +2,7 @@ module Pizza
   class Pie
   	attr_accessor :toppings
 
-  	def initialize(toppings)
+  	def initialize(toppings=['cheese'])
   		@toppings = toppings
   	end
 
