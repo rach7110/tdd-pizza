@@ -18,7 +18,7 @@ describe Pizza::Topping do
   	end
 
     it 'set whether or not the topping is vegetarian' do
-      topping = Pizza::Topping.new('bell peppers', vegetarian: true)
+      topping = Pizza::Topping.new('bell peppers', true)
 
       expect(topping.vegetarian).to eq(true)      
     end
