@@ -10,11 +10,19 @@ end
 describe Pizza::Topping do
 	
   describe '.initialize' do
+
     it 'set the name of the topping' do
       topping = Pizza::Topping.new('garlic')
 
       expect(topping.name).to eq('garlic')
   	end
+
+    it 'set whether or not the topping is vegetarian' do
+      topping = Pizza::Topping.new('bell peppers', vegetarian: true)
+
+      expect(topping.vegetarian).to eq(true)      
+    end
+
   end
 
 end
